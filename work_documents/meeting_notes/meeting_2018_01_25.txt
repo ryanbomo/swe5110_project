@@ -1,0 +1,29 @@
+Summary of Research on the problems facing older people with memory impairment
+
+
+
+Identified Problems
+    Descriptions of each problem:
+ - Things like "are they taking the right dosages of medication?"
+ - Doctor's Appointment Reminders
+ - "People I've met" database
+
+
+
+Potential Solutions
+ - These are the general requirements
+     - Functional Requirement describing a general overview for each solution
+         - Doctor's Appointments - Able to sync with phone calendar, identify doctor/medical entries, and give reminders over a more prolonged period of time. Rather than just the standard 1 or 2 for the calendar app, it will give reminders starting a few days before, and escalating in frequency as the appointment approaches.
+         - "People I've Met" Database - when a user has met new people, they can take a photo, record information about the meeting and informatoin about the person that they've met.  Important details include name, date, address, nature of the meeting, and frequency of interaction.
+         - "Dosage Reminders" - 
+
+
+Identify Stakeholders
+     - Identifying
+     - Prioritizing
+
+Bilbiography
+
+https://www.helpguide.org/articles/alzheimers-dementia-aging/age-related-memory-loss.htm
+
+https://www.caregiver.org/mild-cognitive-impairment-mci
