@@ -1,4 +1,8 @@
 Summary of Research on the problems facing older people with memory impairment
+ - What is the problem?
+ - Who does it affect?
+ - How widespread is it?
+ - 
 
 
 
@@ -16,6 +20,9 @@ Potential Solutions
          - Doctor's Appointments - Able to sync with phone calendar, identify doctor/medical entries, and give reminders over a more prolonged period of time. Rather than just the standard 1 or 2 for the calendar app, it will give reminders starting a few days before, and escalating in frequency as the appointment approaches.
          - "People I've Met" Database - when a user has met new people, they can take a photo, record information about the meeting and informatoin about the person that they've met.  Important details include name, date, address, nature of the meeting, and frequency of interaction.
          - "Dosage Reminders" - 
+         - Voice Detection
+         - Position Tracking
+         - Emergency Help
 
 
 Identify Stakeholders

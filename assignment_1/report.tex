@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx,color,listings,titling}
+\usepackage{graphics}
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+\setlength\parindent{0pt}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem*{surfacecor}{Corollary 1}
+\newtheorem{conjecture}{Conjecture} 
+\newtheorem{question}{Question} 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\begin{document}
+\title{Assignment 1: Memory Report}
+\author{Ryan Bomalaski and Venkatesh Sekar}
+\predate{}
+\postdate{}
+\date{}
+
+\maketitle
+
+\section*{Preliminary Research}
+According to the Mayo Clinic, some degree of memory problems is a common part of aging.${^1}$  From forgetting your keys to the name of a person you just met, issues can range from minor to severe.  Likewise, the frequency can range from sporadic to frequent.  Issues arise, however, with memory loss due to diseases like Alzhiemer's.\\
+\\
+Some of the early signs of disrupted living due to memory loss are asking the same questions repeatedly, forgetting common words when speaking, mixing words up, taking longer to complete familiar tasks, misplacing items, getting lost in familiar areas and mood swings.${^1}$  Further, some seniors with memory problems who need assistance can face issues with abuse, loneliness, financial security and transportation.${^2}$\\
+\\
+Memory loss is not just an issue for the elderly, though. It can also affect younger people as well.  From temporarily induced memory loss, such as that caused by heavy drinking, to early onset dementia to sleep deprivation, memory issues can also be an issue for younger people.$[^3]$
+
+\section*{Identified Problems}
+One of the immediately identifiable problems with memory loss is tracking day to day interactions with people.  Those who suffer from memory problems are often unable to recall new people or recent interactions. A software solution should be able to help keep track of this in an automated way.\\
+\\
+Memory impairment can also cause difficulties with transportation.  People of any age group need to be able to travel to doctor's appointments, and those with memory problems will likely need frequent doctor's visits. Coordinating some kind of transportation component, from a ride-sharing network to something as simple as bringing a taxi to your location, should be included as well.\\
+\\
+Compounding on the transportation issue is the issue of being able to recall locations, both current and destination. Some sort of automated location tracker, with pins in frequent locations, should exist to help coordinate where the user should be.  Behavioral models for "home", "doctor", and various activities could be developed as well.\\
+\\
+Lastly, emergencies can be very problematic for those with memory issues.  From getting lost to needing immediate medical attention, a system for quickly fixing imminent high risk problems should be implemented.\\
+
+\section*{Functional Solutions}
+Functionally, a software solution should help mitigate the four above issues.  The software should be fairly hands free and should be on a device that can monitor the user.  Forgetting to use the device could be an issue with the memory impaired, so ensuring that it does always not require direct interaction will go a long way in ensuring usage.  Thus a phone, with extensions to digital personal assistants like Siri or Alexa, would be the best vessel for the software.\\
+\\
+For tracking day to day interactions, a "people I have met" database could be kept on the device.  This could be updated manually, but could also interact with an always listening approach to record conversations.  The location and time of the interaction should be logged, and a reminder to review the interaction could be sent to the user at a later time.  This should also be manually modifiable, so that the user can add people frequently interacted with.  Using voice recognition, doctors and care givers could be recognized and important medical information and cues could be tracked.\\
+\\
+Further, voice recognition could be used to help with getting transportation as well.  By simply asking for a car or ride, the personal assistant should work with the transportation system to get the user where they need to go.  If this is a ride-sharing type set up, then it should schedule a pick-up/drop-off, and if it is a taxi set-up, it should schedule a pick-up/drop-off and handle payment as well. It should also store and have easily accessible common addresses that the transportation system can integrate with to help communicate locations without the user needing to remember exact addresses.\\
+\\
+Finally, an emergency system should integrate with the phone and GPS to follow three main functions: "Call the police", "Call an ambulance" and "I am lost".  Voice and sound cues could also be used to help detect an emergency scenario.\\
+
+
+
+\section*{Stakeholders}
+Identifying the stakeholders of a project is both difficult and important.  Often, there are unseen or unknown forces that have a stake in the project.  With this project, the following stakeholders were derived from thinking about who would benefit from this software and who would have input it its development.  No negative stakeholders could be identified, as no competitor could be identified.
+\subsection*{Users}
+The direct user of the program is an obvious stakeholder.  They will be interacting directly with the software and will hopefully be benefiting the most from its existence. In order to understand what the user needs from the software, use cases and scenarios need to be developed.  These can be directly from user interaction, or interviewing those who care for the user. The goal for this stakeholder will be an improved quality of life through assisted memory function.
+\subsection*{Developers}
+The developers of the software are also stakeholders, as they have a stake in the product being producible. Getting the requirements from the developers entails understanding what they need in order to bridge the gap of idea and product.  Likewise, understanding what is and is not possible within the technical scope of the project will help to shape it.  The goal for this stakeholder is to produce effective, efficient and functional memory assistance software.
+\subsection*{Investors}
+The investor is another obvious stakeholder. Any software project takes up the time of at least one developer, and virtually no developer works for free. Investors are needed to see that the entire endeavor can make it off the ground.  Understanding that the investors will want to make a return on their investment is an important part of understanding the investors' requirements.
+\subsection*{Caregivers}
+Caregivers - those who help the user in their day to day routine - are also tangential stakeholders in the project.  These stakeholders can range from doctors and nurses to family members involved in daily care. They are invested in seeing the quality of life for the user improve, but they also may be a part of the emergency contact section of the project and are also invested in seeing that they are properly notified of any problems.  Their goals are similar to the users - an improved quality of life for the memory impaired.
+\subsection*{Regulators}
+With any medical related product, regulators are sure to be involved.  When it comes to the memory impaired, regulatory bodies such as the FDA${^4}$ and CDC can be involved.  If a unique form of wireless communication is involved in the emergency part of the product, the FCC may be involved.  Non-governmental bodies will also have a say in regulation.  With the elderly, having AARP${^5}$ involved will go a long way in solidifying legitimacy. The goals of the regulators are to ensure compliance with the legal code in order to best ensure proper treatment of the public.
+
+
+\section*{Bibliography}
+${1}$ - https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/in-depth/memory-loss/art-20046326
+\\
+${2}$ - http://miamihomecareservices.com/blog/top-10-concerns-that-seniors-face/
+\\
+${3}$ - https://www.webmd.com/brain/memory-loss\#1
+\\
+${4}$ - https://www.fda.gov/MedicalDevices/ucm085281.htm
+\\
+${5}$ - https://www.aarp.org/content/dam/aarp/benefits\_discounts/Publications/2012-08/summer-english-products-and-services-directories.pdf
+
+
+\end{document}
