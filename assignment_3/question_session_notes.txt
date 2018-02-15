@@ -1,0 +1,38 @@
+1.	What kind of features would be sought after in a memory management and assistance system? 
+     - Range and Accuracy of Recording
+     - Data Features
+         - Interface Features
+             - Voice recognition
+             - Cognitive Companions Research
+                 - AI Systems designed just for companionship
+                 - targeted at emiontal support
+                 - Personal Relationship Development
+
+2.	What kind of cost would we run into producing both hardware and software components and what scale are we looking at?
+     -  Stages
+         - Margins to support development
+         - costs rae difficult to predict beore complete design
+             - look at analgous systems, similar to fitbit but with a bit more 
+             - look at cost curves for things like fitbit, and possible new technologies
+             - Also lok at that pebble watch
+             - hardware prototypes into the $10's of thousands
+             - wide adoption would be a device around $1k to $2k
+         - Human/Computer Interface
+             - Hot/Cold
+
+3.	What kind of regulatory issues might we run into? Do we need to worry about medical or consumer regulatory bodies? What kind of security issues we might run into?
+     - Monitor 24 hours, lots of security issues
+     - Device and base station issues
+     - What happens to the data, how is it handled?
+         - CFR 21 Part 11 and Part 800
+     - Medical Device label comes with issues like HIPPA, medical/clinical trials, user affects, looking at adding 2 years, and increased approval issues for changes
+
+
+
+
+Notes:
+ - Tracking Disease Indicators
+ - Charge Indicators (not just Low Battery, but also smart rhythm based
+         - If I know the person usually is just watching TV for 2 hours, recommend a charge
+ - Finding Objects
+         - How?

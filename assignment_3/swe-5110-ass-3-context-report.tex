@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{multicol}
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\title{Assignment 3: Context Diagram}
+\author{Ryan Bomalaski and Venkatesh Sekar}
+
+\maketitle
+
+\section*{System Overview}
+The goal of this project is to gather requirements for a memory improvement and management system for patients with minor memory impairment.  The system is called CogBit and will include a hardware device that is worn around the wrist and a software component that is installed on the user's phone. The watch and the phone communicate through Blue Tooth with each other, feeding the necessary information to and from the software component.\\
+\\
+The software component interface with various other systems, including medical care, emergency care, rideshare/taxi services, camera, microphone and cloud storage.  The CogBit itself has a display for the user, a vibration notification system and a microphone.
+
+
+\section*{System Entities and Relationship}
+
+\begin{multicols}{2}
+\subsection*{User}
+The user is the memory impaired person that will use the CogBit hardware/software to help improve their quality of life.\\
+\\
+The user will interact directly with the Cogbit and with the software on their phone.  The CogBit will also be able to gather information passively from the user.
+
+\subsection*{CogBit Device}
+The CogBit is a device that the user wears.  It gives reminders to help with memory function while also passively and actively taking data from the user.\\
+\\
+The CogBit device actively interfaces with the CogBit software on the smart phone.  It also relates to the user in that it sends reminders and gathers data from them.
+
+\subsection*{Smart Phone Application}
+The Smart Phone Application is like the central hub of the CogBit system.  It processes data from the CogBit, and passes it along to the necessary subsystem.  It also takes input from the other subsystems to coordinate and organize events. It interacts with the following:\\
+\\
+\textbf{CogBit} - Phone Application pushed notifications to CogBit and Receives raw data from cogbit to analyze and sort\\
+\textbf{Phone Camera} - When the user meets someone new, the software takes a photo of the person to store with the event\\
+\textbf{Phone Microphone} - When the software detects the user having a conversation, the microphone records this conversation\\
+\textbf{GPS} - Whenever an noteworthy event occurs, the software logs the GPS coordinates.  The GPS is also used to find locations for the rideshare/emergency services.\\
+\textbf{Phone Calendar} - The software interfaces with the phone calendar to help send reminders and to create future events from the doctor/taxi.\\
+\textbf{Doctor/Caregiver} - The software gives the doctor/caregiver any new relevant medical events or episodes.\\
+\textbf{Taxi/Rideshare} - The software contacts and schedules a ride.  The software also passes along both destination and user locations.\\
+\textbf{Emergency Services} -  The software contacts emergency services.  The software also passes along both emergency information and user location.\\
+\textbf{Cloud Storage} - The software stores data offsite, as large amounts of photos and recordings can take up a lot of space.
+
+
+\subsection*{Camera}
+The Camera entity is a part of the phone.  It is to help with the user recognizing faces.  It creates a log of new people met, along with a photo of the person.  The camera is also used to recognize faces from previous encounters.\\
+\\
+The camera interacts only with the phone software.
+
+\subsection*{Microphone}
+The microphone records meetings, notes and conversations.\\
+\\
+The microphone interacts only with the phone software.
+
+\subsection*{GPS}
+GPS is used to get the location of notable events. \\
+\\
+GPS interacts directly with phone software.  The software then passes along that information as necessary.
+
+\subsection*{Phone Calendar}
+The phone calendar is used to track future events.\\
+\\
+It interacts directly with the phone software. The calendar needs to take in new events and be able to deliver information on upcoming events.
+
+\subsection*{Cloud Storage}
+This stores all information that is too large.  It also allows for offsite machine learning processing for image recognition and voice recognition.\\
+\\
+Cloud storage interfaces with the phone software as an offsite database. It needs to send relevant data to the phone and receive data from the phone.
+
+\subsection*{Doctor/Caregiver}
+The Doctor/Caregiver entity is the interface with which the doctor/caregiver are notified of relevant information or changes in the patient.\\
+\\
+Doctor/Caregiver Entity receives patient information from the phone software and gives relevant appointment and medication information to the phone software.
+
+\subsection*{Taxi/Rideshare}
+The Taxi/Rideshare entity is the interface with which the taxi/rideshare are notified of potential fares.\\
+\\
+The Taxi/Rideshare entity interfaces directly with the software to get the location and destination of the user.  It also gives the software relevent information like driver arrival and ride cost.
+
+\subsection*{Emergency Services}
+The Emergency Services Entity is the interface for which the Emergency Services like police and medical personnel are notified of any issues the user is having.\\
+\\
+Emergency Services Entity relates directly with the phone software by receiving user location and emergency information.  It can also receive instructions to give to the user to perform before emergency personnel arrive.
+
+\end{multicols}
+\end{document}
