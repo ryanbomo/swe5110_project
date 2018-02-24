@@ -24,7 +24,7 @@
      - Monitor 24 hours, lots of security issues
      - Device and base station issues
      - What happens to the data, how is it handled?
-         - CFR 21 Part 11 and Part 800
+         - CFR 21 Part 11 (electronic records) and Part 800 (medical devices)
      - Medical Device label comes with issues like HIPPA, medical/clinical trials, user affects, looking at adding 2 years, and increased approval issues for changes
 
 
