@@ -1,0 +1,11 @@
+Outline for Automated Car Application
+ - High Level Description
+ - Preliminary Research
+ - Stakeholders Documentation
+ - Context diagram
+ - Rich Picture of Project
+ - Stories
+ - Steps Modeling Stories
+ - Data Model
+ - Data Flow Diagram
+ - 
