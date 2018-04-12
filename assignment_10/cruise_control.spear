@@ -1,0 +1,86 @@
+Specification cruise_control
+
+Imports:
+
+Units:
+
+Types:
+	velocity : { r : real | r >= 0.0 }
+	CRUISE_MODE : enum { OFF, ARMED, ACTIVE }
+
+Constants:
+	SET_THRESHOLD : real = 25.0
+	MAX_CHANGE : real = 5.0
+
+Patterns:
+	pattern cruise(cruise_on : bool, set_cruise : bool, brake : bool, current_speed : velocity) returns (mode : CRUISE_MODE)
+	var
+		// Include your code
+		a_mode : CRUISE_MODE
+		
+	let
+		a_mode =
+			if brake then OFF
+			else if set_cruise then
+				if current_speed greater than SET_THRESHOLD then ACTIVE
+				else if current_speed less than SET_THRESHOLD then ARMED
+	
+		// Include your code
+		
+		mode = a_mode
+		
+	tel
+
+Inputs:
+	brake : bool
+	set_cruise : bool
+	cruise_enabled : bool
+	current_speed : velocity
+	
+Outputs:
+	desired_speed : velocity
+	MODE : CRUISE_MODE
+
+State:
+
+Macros:
+	PRE_MODE : CRUISE_MODE = previous MODE with initial value OFF
+	pre_desired_speed : velocity = previous desired_speed with initial value 0.0
+	
+Assumptions:
+	a0: current_speed - (previous current_speed with initial value 0.0) >= -MAX_CHANGE
+	a1: current_speed - (previous current_speed with initial value 0.0) <= MAX_CHANGE
+
+Requirements:
+	r0: MODE == cruise(cruise_enabled, set_cruise, brake, current_speed)
+	r1: (MODE == ARMED and PRE_MODE == OFF) implies (desired_speed == 0.0)
+	r2: (MODE == ARMED and PRE_MODE == ARMED) implies (desired_speed == pre_desired_speed)
+	r3: (MODE == ACTIVE and PRE_MODE == ARMED) implies (desired_speed == current_speed)
+	r4: (MODE == ACTIVE and PRE_MODE == ACTIVE and set_cruise) implies (desired_speed == current_speed)
+	r5: (MODE == ACTIVE and PRE_MODE == ACTIVE and (not set_cruise)) implies (desired_speed == pre_desired_speed)
+	r6: (MODE == ARMED and PRE_MODE == ACTIVE) implies (desired_speed == pre_desired_speed)
+	r7: (MODE == OFF) implies (desired_speed == 0.0)
+
+Properties: // construct the properties we need to be prove 
+	p1: 
+	p2: if break equal to true then
+			CRUISE_MODE not equal to ACTIVE
+	p3: if set_cruise not equal to true then
+			CRUISE_MODE not equal to ACTIVE
+	p4: if speed less than 35 then
+			CRUISE_MODE not equal to ACTIVE
+	p5: 
+	p6: if cruise_enabled equal to true then
+			CRUISE_MODE not equal to OFF
+	p7: if CRUISE_MODE equal to ACTIVE then
+			desired_speed greater than SET_THRESHOLD
+	p8: if set_cruise equal to true and
+		 cruise_enabled equal to true then
+		 CRUISE_MODE equal to ACTIVE
+	
+	// Design an observer to show trace the desired speed is reached
+	t0 observe: desired_speed == 35.0
+	// Design an observer to show a trace that displays the sequence in which the state change can occur
+	t1 observe: once(MODE == ACTIVE and once(MODE == ARMED and once(MODE == OFF)))
+
+

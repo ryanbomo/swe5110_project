@@ -1,4 +1,8 @@
-Outline for Automated Car Application
+Cogbit To Do
+ - Convert Documents to Volere
+     1, 2, 3, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 24
+
+Automated Car Application To Do
  - High Level Description
  - Preliminary Research
  - Stakeholders Documentation
@@ -8,4 +12,5 @@ Outline for Automated Car Application
  - Steps Modeling Stories
  - Data Model
  - Data Flow Diagram
- - 
+ - Volere
+     1, 2, 3, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 24
